@@ -1,4 +1,11 @@
 # localStorageSignal
+install **preact signals for react**
+  
+```bash
+npm install @preact/signals-react
+```
+create a `signal-Store.jsx` file
+
 ```js
 import {
   signal,
@@ -33,7 +40,6 @@ function parsedValue(key) {
   try {
     return JSON.parse(storedValue);
   } catch (error) {
-    // If parsing fails, return the original value as is
     return storedValue;
   }
 }
