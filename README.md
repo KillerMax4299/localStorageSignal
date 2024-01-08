@@ -1,6 +1,11 @@
 # localStorageSignal
 ```js
-import { signal,useSignal, effect,useSignalEffect } from "@preact/signals-react";
+import {
+  signal,
+  useSignal,
+  effect,
+  useSignalEffect,
+} from "@preact/signals-react";
 
 export const storageSignal = (key, initialValue) => {
   const value = signal(parsedValue(key) || initialValue);
@@ -22,7 +27,7 @@ export const useStorageSignal = (key, initialValue) => {
   return value;
 };
 
-function parsedValue(key){
+function parsedValue(key) {
   const storedValue = localStorage.getItem(key);
 
   try {
